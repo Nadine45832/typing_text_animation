@@ -12,8 +12,7 @@
 
 ## Usage
 
-
-```
+```js
 // Import the animate function
 import { animate } from 'your-animation-library';
 
@@ -41,7 +40,4 @@ const animationController = animate(animatedElement, lines, animationOptions);
 setTimeout(() => {
     animationController.abort();
 }, 10000);  // Stop the animation after 10 seconds
-
-
 ```
-

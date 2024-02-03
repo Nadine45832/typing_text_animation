@@ -12,32 +12,36 @@
 
 ## Usage
 
+
 ```
-import { animate } from 'typing-text-animation';
+// Import the animate function
+import { animate } from 'your-animation-library';
 
-// Get the element where you want to display the typing animation
-const targetElement = document.getElementById('typing-animation-container');
+// Get the element where you want to display the animated text
+const animatedElement = document.getElementById('your-element-id');
 
-// Define an array of strings to animate
-const textLines = [
-  'Hello, World!',
-  'Welcome to typing_text_animation',
-  'Let\'s make text come alive!'
+// Define the lines of text you want to animate
+const lines = [
+    'Hello, World!',
+    'This is an example of animated text.',
+    'You can customize the animation options.'
 ];
 
-// Optional customization options
-const options = {
-  startDelay: 1000,
-  lineDelay: 2000,
-  letterDelay: 50,
-  cursor: document.getElementById('cursor-element'), // Optional cursor element
+// Optional: Customize animation options
+const animationOptions = {
+    startDelay: 1000,      // Delay before animation starts (in milliseconds)
+    lineDelay: 2000,       // Delay between lines (in milliseconds)
+    letterDelay: 50        // Delay between letters (in milliseconds)
 };
 
-// Start the typing animation
-const animationController = animate(targetElement, textLines, options);
+// Start the animation
+const animationController = animate(animatedElement, lines, animationOptions);
 
-// To stop the animation (for example, on component unmount or user interaction)
-// Call the `abort` method on the returned controller
-// animationController.abort();
+// Optional: Stop the animation after a certain duration
+setTimeout(() => {
+    animationController.abort();
+}, 10000);  // Stop the animation after 10 seconds
+
 
 ```
+
